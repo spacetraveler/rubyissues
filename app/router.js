@@ -6,6 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('repositories', function() {
+    this.route('index', { path: "/" });
+    this.route('new');
+  });
 });
 
 export default Router;
