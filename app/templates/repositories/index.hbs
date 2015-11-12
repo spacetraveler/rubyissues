@@ -1,8 +1,11 @@
 <ul>
   {{#each model as |repo|}}
-    <li>
-      {{repo.full_name}}<br>
-      <small><a href="{{repo.homepage}}" target="_blank">{{repo.homepage}}</a></small>
+    <li class="repo">
+      <img src="{{repo.avatar_url}}" alt="{{repo.full_name}}" class="avatar">
+      <p>
+        {{repo.full_name}}<br>
+        <small><a href="{{repo.homepage}}" target="_blank">{{repo.homepage}}</a></small>
+      </p>
     </li>
   {{/each}}
 </ul>
