@@ -7,10 +7,13 @@ export default Ember.Route.extend({
 
   actions: {
     createRepository(repo_name) {
+      var self = this;
       var new_repo = this.store.createRecord('repository', {
         full_name: repo_name
       });
-      new_repo.save();
+      new_repo.save().then(function() {
+        self.transitionTo('repositories.index');
+      });
     }
   }
 });
