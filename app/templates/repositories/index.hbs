@@ -1,11 +1,18 @@
 <ul>
   {{#each model as |repo|}}
     <li class="repo">
-      <img src="{{repo.avatar_url}}" alt="{{repo.full_name}}" class="avatar">
-      <p>
-        {{repo.full_name}}<br>
-        <small><a href="{{repo.homepage}}" target="_blank">{{repo.homepage}}</a></small>
-      </p>
+      <div class="inner">
+        <img src="{{repo.avatar_url}}" alt="{{repo.full_name}}" class="avatar">
+        <p>{{repo.full_name}}</p>
+        <div class="icons">
+          {{#if repo.html_url}}
+            <a class="icon" href="{{repo.html_url}}" target="_blank">{{paper-icon icon="code"}}</a>
+          {{/if}}
+          {{#if repo.homepage}}
+            <a class="icon" href="{{repo.homepage}}" target="_blank">{{paper-icon icon="open-in-new"}}</a>
+          {{/if}}
+        </div>
+      </div>
     </li>
   {{/each}}
 </ul>
