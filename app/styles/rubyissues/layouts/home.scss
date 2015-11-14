@@ -1,0 +1,8 @@
+.home {
+  text-align: center;
+  margin: 0 auto;
+
+  @include on-desktop {
+    max-width: $small-breakpoint;
+  }
+}
