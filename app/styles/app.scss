@@ -1,4 +1,6 @@
-@import 'ember-paper';
+// Can not use ember-paper until there is a solution for
+// https://github.com/miguelcobain/ember-paper/issues/224
+// @import 'ember-paper';
 @import 'globals/_variables';
 @import 'globals/_mixins';
 
